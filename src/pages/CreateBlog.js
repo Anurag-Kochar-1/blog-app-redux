@@ -2,6 +2,7 @@ import React, {useState, useRef} from "react";
 import { useDispatch } from "react-redux"
 import {add} from "../features/PostBlogSlice"
 import { Link , Navigate, useNavigate} from "react-router-dom"
+import "../App.css"
 
 function CreateBlog() {
   const navigate = useNavigate()
@@ -23,7 +24,7 @@ function CreateBlog() {
         <div className="create-blog-component">
           <div className="d-flex justify-content-center ">
             <h3 className="create-blog-title"> Post your Blog </h3>
-            <button> <Link to={'/'} > GO home  </Link> </button>
+            
           </div>
 
           <div className="mb-3 margin">
@@ -76,7 +77,7 @@ function CreateBlog() {
           </div>
           <div className="d-flex justify-content-center ">
 
-            <button className="btn btn-dark m-2" onClick={() => {
+            <button className="btn btn-dark m-2 wd" onClick={() => {
               if(titleInputRef.current.value.length !== 0 && authorNameInputRef.current.value.length !== 0 && blogContentInputRef.current.value.length !== 0){
                 dispatch(add({blogTitle : title, authorName : authorName , blogContent : blogContent }))
                 setTimeout(() => {
@@ -89,11 +90,11 @@ function CreateBlog() {
               
             }} > Post </button>
 
-            <button onClick={() => {
-              console.log(blogContentInputRef.current.value.length);
-              console.log(authorName)
-              console.log(blogContent);;
-            }} > LOG ALL state </button>
+            <button className="btn btn-danger m-2 wd"
+            onClick={() => navigate('/') }
+            > Cancel </button>
+
+            
           </div>
         </div>
       </div>
@@ -102,3 +103,11 @@ function CreateBlog() {
 }
 
 export default CreateBlog;
+
+
+
+// <button onClick={() => {
+//               console.log(blogContentInputRef.current.value.length);
+//               console.log(authorName)
+//               console.log(blogContent);;
+//             }} > LOG ALL state </button>

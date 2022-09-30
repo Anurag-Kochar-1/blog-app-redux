@@ -6,7 +6,7 @@ function Blog(props) {
     <div className={ props.title === undefined ? "blocked-blog" : "blog-container" } >
         <div className='title-box'>
             <h2> {props.title} </h2>
-            <span>🗑️</span>
+            <span className='trash-icon'>🗑️</span>
             
         </div>
 
@@ -16,12 +16,15 @@ function Blog(props) {
             </p>
         </div>
 
-        <div className='author-box'>
-            <p> {props.authorName} </p>
-            <button onClick={() => console.log(props) } > Log Prop </button>
+        <div className='author-name-box'>
+            <p className='author-name'> @{props.authorName} </p>
+            
         </div>
     </div>
   )
 }
 
 export default Blog
+
+
+// <button onClick={() => console.log(props) } > Log Prop </button>

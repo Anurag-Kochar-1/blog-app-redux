@@ -101,7 +101,7 @@
 
 .blog-container {
     /* border: 3px solid black; */
-    width: 500px;
+    width: 800px;
     height: auto;
     padding: 35px;
     border-radius: 10px;
@@ -113,7 +113,47 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
-    /* padding: 0 10px; */
-    padding: 15px 0;
+    /* border: 1px solid black; */
+    padding: 10px 10px;
+}
+
+.trash-icon {
+    font-size: 20px;
+}
+
+.trash-icon:hover {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* Additional width for btn */
+.wd {
+    min-width: 150px;
+}
+
+.blog-context-box{
+    font-weight: 500;
+    padding: 15px;
+    font-size: 18px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.author-name-box {
+    width: 100;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 15px 10px;
+    /* border: 2px solid red; */
+}
+
+.author-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: dodgerblue;
 }

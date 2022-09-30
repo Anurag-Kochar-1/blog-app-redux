@@ -10,9 +10,7 @@ function Home() {
 
   return (
     <div className='home-page-container'>
-      <h1> Home </h1>
-        <button> <Link to={'/createblog'} > GO TO CREATE BLOG  </Link> </button>
-        <button onClick={() => console.log(blogs) } > LOG blogs </button>
+        <button onClick={() => console.log(blogs) } > LOG ALL blogs </button>
 
         {blogs.map((blog, index) => {
           return (
