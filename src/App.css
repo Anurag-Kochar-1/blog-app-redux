@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.blocked-blog {
+    display: none;
+}
+
+
+.navbar-container {
+    width: 100%;
+    height: 15vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    font-family: 'Poppins';
+}   
+
+.navbar-icon {
+    font-size: 15px;
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 45px;
+}
+
+.post-blog-btn {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 35px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.post-blog-btn:hover {
+    background-color: gainsboro;
+}
+
+
+
+
+/* create-blog-component-container */
+.create-blog-component-container {
+    /* border: 2px solid black; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.create-blog-component {
+    /* border: 3px solid red; */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 30px;
+    border-radius: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+}
+
+.margin {
+    margin: 30px 0;
+}
+
+.create-blog-title {
+    font-weight: 600;
+}
+
+.font-weight {
+    font-weight: 600;
+}
+
+
+/* Home Page */
+.home-page-container {
+    /* border: 4px solid red; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.blog-container {
+    /* border: 3px solid black; */
+    width: 500px;
+    height: auto;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 6.4px 14.4px 0 rgb(0 0 0 / 13%), 0 1.2px 3.6px 0 rgb(0 0 0 / 11%);
+    margin: 50px;
+}
+.title-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    /* padding: 0 10px; */
+    padding: 15px 0;
+}
