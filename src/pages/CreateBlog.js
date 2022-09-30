@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import { useDispatch } from "react-redux"
 import {add} from "../features/PostBlogSlice"
 import { Link , Navigate, useNavigate} from "react-router-dom"
@@ -9,6 +9,10 @@ function CreateBlog() {
   const [title, setTitle] = useState('')
   const [authorName, setAuthorName] = useState('')
   const[blogContent, setBlogContent] = useState('')
+
+  const titleInputRef = useRef(null)
+  const authorNameInputRef = useRef(null)
+  const blogContentInputRef = useRef(null)
 
   const dispatch = useDispatch()
 
@@ -35,6 +39,7 @@ function CreateBlog() {
               id="exampleFormControlInput1"
               placeholder="add a title..."
               onChange={(e) => setTitle(e.target.value)}
+              ref={titleInputRef}
             />
           </div>
           <div className="mb-3 margin">
@@ -50,6 +55,7 @@ function CreateBlog() {
               id="exampleFormControlInput1"
               placeholder="add blog author name..."
               onChange={(e) => setAuthorName(e.target.value)}
+              ref={authorNameInputRef}
             />
           </div>
           <div className="mb-3 margin">
@@ -65,23 +71,26 @@ function CreateBlog() {
               placeholder="add blog content..."
               rows="5"
               onChange={(e) => setBlogContent(e.target.value)}
+              ref={blogContentInputRef}
             ></textarea>
           </div>
           <div className="d-flex justify-content-center ">
 
             <button className="btn btn-dark m-2" onClick={() => {
-              if(title){
-
+              if(titleInputRef.current.value.length !== 0 && authorNameInputRef.current.value.length !== 0 && blogContentInputRef.current.value.length !== 0){
+                dispatch(add({blogTitle : title, authorName : authorName , blogContent : blogContent }))
+                setTimeout(() => {
+                  navigate('/')
+                }, 700);
+              } else {
+                alert("Empty Fields are not allowed")
               }
-              dispatch(add({blogTitle : title, authorName : authorName , blogContent : blogContent }))
-              setTimeout(() => {
-                navigate('/')
-              }, 700);
+              
               
             }} > Post </button>
 
             <button onClick={() => {
-              console.log(title);
+              console.log(blogContentInputRef.current.value.length);
               console.log(authorName)
               console.log(blogContent);;
             }} > LOG ALL state </button>

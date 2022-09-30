@@ -14,9 +14,9 @@ function Home() {
         <button> <Link to={'/createblog'} > GO TO CREATE BLOG  </Link> </button>
         <button onClick={() => console.log(blogs) } > LOG blogs </button>
 
-        {blogs.map((blog) => {
+        {blogs.map((blog, index) => {
           return (
-            <div>
+            <div key={index}>
               <Blog 
               title = {blog.action_payload?.blogTitle}
               authorName = {blog.action_payload?.authorName}
