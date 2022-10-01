@@ -2,9 +2,13 @@ import React, {useState, useRef} from "react";
 import { useDispatch } from "react-redux"
 import {add} from "../features/PostBlogSlice"
 import { Link , Navigate, useNavigate} from "react-router-dom"
+import { useSelector } from "react-redux"
 import "../App.css"
 
 function CreateBlog() {
+
+  const blogsSelectorForID = useSelector((state) => state.PostBlog.value)
+
   const navigate = useNavigate()
 
   const [title, setTitle] = useState('')
@@ -79,10 +83,10 @@ function CreateBlog() {
 
             <button className="btn btn-dark m-2 wd" onClick={() => {
               if(titleInputRef.current.value.length !== 0 && authorNameInputRef.current.value.length !== 0 && blogContentInputRef.current.value.length !== 0){
-                dispatch(add({blogTitle : title, authorName : authorName , blogContent : blogContent }))
+                dispatch(add({ id : blogsSelectorForID[blogsSelectorForID.length-1].id + 1 ,  blogTitle : title, authorName : authorName , blogContent : blogContent }))
                 setTimeout(() => {
                   navigate('/')
-                }, 700);
+                }, 100);
               } else {
                 alert("Empty Fields are not allowed")
               }

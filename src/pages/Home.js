@@ -16,12 +16,18 @@ function Home() {
           return (
             <div key={index}>
               <Blog 
-              title = {blog.action_payload?.blogTitle}
-              authorName = {blog.action_payload?.authorName}
-              blogContent = {blog.action_payload?.blogContent}
-              
+              // title = {blog.action_payload?.blogTitle}
+              // authorName = {blog.action_payload?.authorName}
+              // blogContent = {blog.action_payload?.blogContent}
+              title = {blog.blogTitle}
+              authorName = {blog.authorName}
+              blogContent = {blog.blogContent}
+              id = {blog.id}
+              // id2 = {blog.id}
+              // id = {index}
               />
             </div>
+            
           )
         })}
 
