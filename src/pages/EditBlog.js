@@ -10,13 +10,13 @@ function EditBlog() {
     const navigate = useNavigate()
 
     const location = useLocation()
-    // const [newTitle , setNewTitle] = useState(location.state.title)
-    // const [newAuthorName , setNewAuthorName] = useState(location.state.authorName)
-    // const [newBlogContent, setNewBlogContent] = useState(location.state.blogContent)
+    const [newTitle , setNewTitle] = useState(location.state.title)
+    const [newAuthorName , setNewAuthorName] = useState(location.state.authorName)
+    const [newBlogContent, setNewBlogContent] = useState(location.state.blogContent)
 
-    const [newTitle , setNewTitle] = useState()
-    const [newAuthorName , setNewAuthorName] = useState()
-    const [newBlogContent, setNewBlogContent] = useState()
+    // const [newTitle , setNewTitle] = useState()
+    // const [newAuthorName , setNewAuthorName] = useState()
+    // const [newBlogContent, setNewBlogContent] = useState()
 
   return (
     <div>
@@ -39,7 +39,7 @@ function EditBlog() {
               className="form-control"
               id="exampleFormControlInput1"
             //   placeholder="add a title..."
-            //   value={'0'}
+              value={newTitle}
               onChange={(e) => setNewTitle(e.target.value)}
               
             />
@@ -56,7 +56,7 @@ function EditBlog() {
               className="form-control"
               id="exampleFormControlInput1"
             //   placeholder="add blog author name..."
-            // value={'1'}
+            value={newAuthorName}
             onChange={(e) => setNewAuthorName(e.target.value)}
               
             />
@@ -72,7 +72,7 @@ function EditBlog() {
               className="form-control"
               id="exampleFormControlTextarea1"
             //placeholder="add blog content..."
-                // value={'2'}
+                value={newBlogContent}
               rows="5"
               onChange={(e) => setNewBlogContent(e.target.value)}
               

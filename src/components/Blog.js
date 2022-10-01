@@ -26,7 +26,7 @@ function Blog(props) {
             
              
 
-            <button onClick={() => console.log(props)} > log props </button>
+            {/* <button onClick={() => console.log(props)} > log props </button> */}
             
         </div>
 
@@ -38,7 +38,7 @@ function Blog(props) {
 
         <div className='author-name-box'>
             <p className='author-name'> @{props.authorName} </p>
-            <button onClick={() => console.log(props.id)}> Log this ID </button>
+            {/* <button onClick={() => console.log(props.id)}> Log this ID </button> */}
             
         </div>
     </div>
