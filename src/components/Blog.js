@@ -19,7 +19,11 @@ function Blog(props) {
             }}
             
             >🗑️</span>
-            <button onClick={() => console.log(props)} > log props </button>
+
+            <span  className='trash-icon'>
+             ✏️
+            </span>
+            {/* <button onClick={() => console.log(props)} > log props </button> */}
             
         </div>
 
