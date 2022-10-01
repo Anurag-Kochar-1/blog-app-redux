@@ -119,9 +119,19 @@
 
 .trash-icon {
     font-size: 20px;
+    margin: 0 5px;
 }
 
 .trash-icon:hover {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.edit-pen-icon {
+    font-size: 20px;
+    margin: 0 5px;
+}
+.edit-pen-icon:hover {
     font-size: 22px;
     cursor: pointer;
 }

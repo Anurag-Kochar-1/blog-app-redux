@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from "react-redux"
 import { deleteBlog } from '../features/PostBlogSlice'
+import { Link , Navigate, useNavigate} from "react-router-dom"
 
 import "../App.css"
 
@@ -20,10 +21,12 @@ function Blog(props) {
             
             >🗑️</span>
 
-            <span  className='trash-icon'>
-             ✏️
-            </span>
-            {/* <button onClick={() => console.log(props)} > log props </button> */}
+            <Link to={'/editblog'} state={props} ><span  className='edit-pen-icon'>✏️</span></Link>
+            
+            
+             
+
+            <button onClick={() => console.log(props)} > log props </button>
             
         </div>
 
