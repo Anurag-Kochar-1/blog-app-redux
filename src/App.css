@@ -55,8 +55,8 @@ html {
 .post-blog-btn {
     border: none;
     outline: none;
-    border-radius: 20px;
-    padding: 10px 35px;
+    border-radius: 1000px;
+    padding: 1rem 3.5rem;
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: 700;
@@ -76,7 +76,7 @@ html {
 /* ------------------------------- create-blog-component-container ------------------------------- */
 
 .create-blog-component-container {
-    /* border: 5px solid red; */
+    /* border: 2px solid red; */
     width: 100%;
     height: auto;
     display: flex;
@@ -87,7 +87,7 @@ html {
 }
 
 .create-blog-component {
-    /* border: 3px solid red; */
+    /* border: 3px solid gold; */
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding: 3rem;
     border-radius: 2rem;
@@ -98,7 +98,7 @@ html {
 }
 
 .margin {
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .create-blog-title {
@@ -288,7 +288,11 @@ html {
 
     html {
         font-size: 56.25%;
-      }
+    }
+
+    /* body {
+        background-color: gold;
+    } */
 
     /* .navbar-container {
         background-color: mediumslateblue;
@@ -309,6 +313,9 @@ html {
         font-size: 50.3%;
     }
 
+    /* body {
+        background-color: lightgrey;
+    } */
    
 
     /* Navbar */
@@ -316,9 +323,30 @@ html {
         display: none;
     }
 
-    /* .navbar-container {
-        background-color: red;
-    } */
+
+    /* Create Blog Page */
+    
+    .create-blog-component {
+        /* border: 3px solid gold; */
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        padding: 3rem;
+        border-radius: 2rem;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        font-family: Poppins;
+    }
+
+    .create-btns {
+        min-width: 8rem;
+        font-size: 1.3rem;
+        padding: 1rem 3rem;
+        /* background-color: green; */
+    }
+
+
+
+    /* HOME Page */
 
     .home-page-container{
         /* background-color: black; */
@@ -351,8 +379,30 @@ html {
         font-size: 1.8rem;
     }
 
+    
+
 }
 
+
+/* Mobile 2nd query */
+@media screen and (max-width: 360px) {
+    /* .navbar-container {
+        background-color: #3dc1d3;
+    } */
+
+    .navbar-title {
+        font-size: 3rem;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 340px) {
+    .post-blog-btn {
+        padding: 1rem 2rem;
+    }
+}
 
 
 /* Desktop */
