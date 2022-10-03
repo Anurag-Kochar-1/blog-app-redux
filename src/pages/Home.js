@@ -7,6 +7,14 @@ import { useSelector } from "react-redux"
 
 function Home() {
 
+  // Russain Pallete
+  function randomColorID () {
+    const rpsChoice = ['lighpurple', 'pink', 'yellow', "darkblue" , "lightorange" , "lighblue", "darkpink", "lightgrey"]
+    const randomNumber= Math.floor(Math.random () * 8)
+    return rpsChoice[randomNumber]
+    
+  }
+
   const blogs = useSelector((state) => state.PostBlog.value)
 
   return (
@@ -27,6 +35,7 @@ function Home() {
                 id = {blog.id}
                 // id2 = {blog.id}
                 // id = {index}
+                randomColorID = {randomColorID}
                 />
               </div>
 

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Link , useLocation , useNavigate} from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { editBlog } from '../features/PostBlogSlice'
+import "../App.css"
 
 
 function EditBlog() {
@@ -10,6 +11,7 @@ function EditBlog() {
     const navigate = useNavigate()
 
     const location = useLocation()
+
     const [newTitle , setNewTitle] = useState(location.state.title)
     const [newAuthorName , setNewAuthorName] = useState(location.state.authorName)
     const [newBlogContent, setNewBlogContent] = useState(location.state.blogContent)
@@ -25,6 +27,8 @@ function EditBlog() {
           <div className="d-flex justify-content-center ">
             <h3 className="create-blog-title"> Edit your Blog </h3>
             
+            {/* <button onClick={() => console.log(location.state)} > LOG LOCATION PROPS </button> */}
+            
           </div>
 
           <div className="mb-3 margin">
@@ -36,7 +40,7 @@ function EditBlog() {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control create-blog-component-inputs"
               id="exampleFormControlInput1"
             //   placeholder="add a title..."
               value={newTitle}
@@ -53,9 +57,9 @@ function EditBlog() {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control create-blog-component-inputs"
               id="exampleFormControlInput1"
-            //   placeholder="add blog author name..."
+              // placeholder="add blog author name..."
             value={newAuthorName}
             onChange={(e) => setNewAuthorName(e.target.value)}
               
@@ -69,7 +73,7 @@ function EditBlog() {
               Blog content
             </label>
             <textarea
-              className="form-control"
+              className="form-control create-blog-component-inputs"
               id="exampleFormControlTextarea1"
             //placeholder="add blog content..."
                 value={newBlogContent}
@@ -78,9 +82,9 @@ function EditBlog() {
               
             ></textarea>
           </div>
-          <div className="d-flex justify-content-center ">
 
-            <button className="btn btn-dark m-2 wd" 
+          <div className="d-flex justify-content-center btn-container ">
+            <button className="btn btn-dark m-2 create-btns post-btn " 
             onClick={() => {
                 dispatch(editBlog( {  
                     // blogTitle : location.state.title , 
@@ -99,7 +103,7 @@ function EditBlog() {
             
             > Update </button>
 
-            <Link to={'/'}> <button className="btn btn-danger m-2 wd"> Cancel </button> </Link> 
+            <Link to={'/'}> <button className="btn btn-danger m-2 create-btns cancel-post-btn "> Cancel </button> </Link> 
 
 
             {/* <button onClick={() => console.log(location.state)} > LOG location ID </button> */}
